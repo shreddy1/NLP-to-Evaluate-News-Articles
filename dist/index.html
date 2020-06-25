@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <!-- <script type="text/javascript" src="../../../dist/main.js"></script> -->
+    <!-- <link rel="stylesheet" href="/styles/resets.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css"> -->
+
+<link href="main.css" rel="stylesheet"></head>
+
+<body>
+<div id="container">
+
+    <header>
+        <div id="heading">
+            Evaluate a News Article with Natural Language Processing
+        </div>
+       
+    </header>
+
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <p id="validationerror" style="display: none">Invalid URL. Please enter a valid URL.</p>
+                <input id="name" type="url" name="input" value="" placeholder="Enter a URL">
+                <input type="submit" name="" value="Result" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
+
+            <h1>Results:</h3>
+            <div class="NLP_content" id="polarity">
+                <h2>Text Polarity:</h2>
+                <p></p>
+            </div>
+            <div class="NLP_content" id="confidence">
+                <h2>Confidence:</h2>
+                <p></p>
+            </div>
+            <div class="NLP_content" id="subjectivity">
+                <h2>Text Subjectivity:</h2>
+                <p></p>
+            </div>
+            <div class="NLP_content" id="excerpt">
+                <h2>Text Excerpt:</h2>
+                <p></p>
+            </div>
+
+            </section>
+
+                
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+</div>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+     });
+ }
+</script>
+
+<script type="text/javascript" src="main.js"></script></body>
+
+
+
+</html>
